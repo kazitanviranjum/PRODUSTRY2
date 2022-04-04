@@ -1,0 +1,196 @@
+/*
+=====================================================
+Theme Name: Produstry
+Author Name: Produstry
+Varsion: 1.0.0
+============================================
+Table of Content
+============================================
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    1. Home Page
+    -----------------------
+        1.1. Common Css
+        1.2. Header Section
+        1.3. Nav Section
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=====================================================
+*/
+/* Common Css Start */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,
+p,
+span{
+    margin: 0;
+    padding: 0;
+}
+a,a:hover{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    display: inline-block;
+    text-decoration: none;
+}
+.btn:focus{
+    box-shadow: none;
+}
+:root{
+    /*color*/
+    --prime-color: #ffcf3e;
+    --focus-color: #353535;
+    /*transition*/
+    --first-transition: all .3s linear;
+    --medium-transition: all .4s linear;
+    --slow-transition: all .5s linear;
+}
+/* ||Common Css End|| */
+
+/* Header Css Start */
+#header{
+    background-color: var(--prime-color);
+    box-shadow: -2px 7px 14px -5px rgba(0,0,0,0.25);
+    -webkit-box-shadow: -2px 7px 14px -5px rgba(0,0,0,0.25);
+    -moz-box-shadow: -2px 7px 14px -5px rgba(0,0,0,0.25);
+
+    font-size: 14px;
+}
+#header .left_sec{
+    color: var(--focus-color);
+}
+
+#header .mid_sec{
+    background-color: var(--focus-color);
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    color: #fff;
+    padding: 10px;
+}
+#header .mid_sec span{
+    text-transform: uppercase;
+}
+
+#header .right_sec ul li{
+    margin: 0 10px;
+    position: relative;
+}
+#header .right_sec ul li::after,
+#header .right_sec ul li::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--focus-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: var(--first-transition);
+}
+#header .right_sec ul li::after{
+    left: auto;
+    right: 0; 
+}
+
+#header .right_sec ul li a i{
+    color: var(--focus-color);
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+}
+#header .right_sec ul li a::after,
+#header .right_sec ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--focus-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: var(--first-transition);
+}
+#header .right_sec ul li a::after{
+    top: auto;
+    bottom: 0; 
+}
+
+#header .right_sec ul li:hover::after,
+#header .right_sec ul li:hover::before,
+#header .right_sec ul li:hover a::after,
+#header .right_sec ul li:hover a::before{
+    transform: scale(1.2);
+}
+/* ||Header Css End|| */
+
+/* Nav Css Start */
+nav .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+nav ul li{
+    position: relative;
+    margin: 0 10px;
+}
+nav ul li::after,
+nav ul li::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--focus-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: var(--first-transition);
+}
+nav ul li::after{
+    left: auto;
+    right: 0; 
+}
+nav ul li a{
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--focus-color) !important;
+    transition: var(--first-transition);
+}
+nav ul li a::after,
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--focus-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: var(--first-transition);
+}
+nav ul li a::after{
+    top: auto;
+    bottom: 0;
+}
+nav ul li:hover::after,
+nav ul li:hover::before,
+nav ul li:hover a::after,
+nav ul li:hover a::before{
+    transform: scale(1.2);
+    background: var(--prime-color);
+}
+
+nav #main_menu .toggler_btn{
+    color: var(--focus-color) !important;
+    font-size: 20px;
+    transition: var(--first-transition);
+}
+nav ul li a:hover,
+nav #main_menu .toggler_btn:hover{
+    color: var(--prime-color) !important;
+}
+/* ||Nav Css End|| */
